@@ -77,8 +77,25 @@ export default {
         
         </section>
 
-        <section>
-            Lower foot
+        <section class="lower-foot">
+            <div>
+                <div>
+                    <button class="foot-button">
+                        SIGN UP NOW!
+                    </button>
+                </div>
+                
+                <div class="lower-foot-icon">
+                    <h2>FOLLOW US</h2>
+                    <ul>
+                        <li><img src="../../public/vue-dc-comics-1/img/footer-facebook.png" alt="Facebook icon"></li>
+                        <li><img src="../../public/vue-dc-comics-1/img/footer-twitter.png" alt="Twitter icon"></li>
+                        <li><img src="../../public/vue-dc-comics-1/img/footer-youtube.png" alt="Youtube icon"></li>
+                        <li><img src="../../public/vue-dc-comics-1/img/footer-pinterest.png" alt="Pinterest icon"></li>
+                        <li><img src="../../public/vue-dc-comics-1/img/footer-periscope.png" alt="Periscope icon"></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     
     </footer>
@@ -123,6 +140,41 @@ export default {
                 img{
                     height: 150%;
                     display: block;
+                }
+        }
+    }
+
+    .lower-foot{
+        padding: $spacing_30;
+        background-color: $footer_gray_color;
+
+        >div{
+            @include container;
+            @include row;
+            justify-content: $space_between;
+            align-items: $XY_flex_center;
+        }
+
+        .foot-button{
+            background-color: $footer_gray_color;
+            border: 2px solid $blue_brand;
+            font-size: $font_size_mid;
+            color: $white_color;
+            padding: $spacing_10;
+        }
+
+        .lower-foot-icon{
+            @include row;
+            @include flex_center;
+                
+                h2{
+                    margin-right: $spacing_20;
+                    color: $blue_brand;
+                }
+
+                li{
+                    display: inline-block;
+                    padding: 0 $spacing_10;
                 }
         }
     }

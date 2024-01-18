@@ -64,7 +64,7 @@ export default {
 
     header{
         padding: $spacing_20;
-        // background-color: $white_color;
+        background-color: $white_color;
         >div{
             @include container;
             @include row;
