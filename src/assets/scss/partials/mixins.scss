@@ -1,0 +1,25 @@
+@mixin debug{
+    border: 1px dashed sandybrown;
+    background-color: cadetblue;
+}
+
+@mixin container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@mixin row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hover-border{
+    border: 2px solid $blue_brand;
+    width: 10px;
+    display: block;
+}
