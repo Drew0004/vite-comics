@@ -43,7 +43,12 @@ export default {
 
         <section class="blue-main">
             <div>
-                content
+                <div class="blue-img-sec" v-for="(singleElem, i) in blueItems">
+                    <div class="img-container">
+                        <img :src="singleElem.image" :alt="singleElem.caption">
+                    </div>
+                    <h4>{{ singleElem.caption }}</h4>
+                </div>
             </div>
         </section>
 
@@ -77,10 +82,40 @@ export default {
             
             >div{
                 @include container;
+                @include row;
+                justify-content: $space_between;
+                align-items: $XY_flex_center;
+
+                .blue-img-sec{
+                    @include row;
+                    @include flex-center;
+
+                    .img-container{
+                        @include img-container;
+                        
+                        img{
+                            width: $percent_100;
+                            height: $percent_100;
+                            object-fit: contain;
+                            display: block;
+                        }
+                    }
+
+                    h4{
+                        color: $white_color;
+                        font-size: $font_size_small;
+                        margin-left: $spacing_10;
+                    }
+                }
             }
         }
+    }
+</style>
+
+
+
         
     
-    }
 
-</style>
+
+                
