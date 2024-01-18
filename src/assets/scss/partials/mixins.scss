@@ -1,3 +1,5 @@
+@use "../partials/variables.scss" as *;
+
 @mixin debug{
     border: 1px dashed sandybrown;
     background-color: cadetblue;
@@ -5,7 +7,7 @@
 
 @mixin container{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 @mixin row{
@@ -16,10 +18,4 @@
 @mixin flex-center{
     justify-content: center;
     align-items: center;
-}
-
-@mixin hover-border{
-    border: 2px solid $blue_brand;
-    width: 10px;
-    display: block;
 }
