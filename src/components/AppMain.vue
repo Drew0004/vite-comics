@@ -43,7 +43,7 @@ export default {
 
         <section class="blue-main">
             <div>
-                <div class="blue-img-sec" v-for="(singleElem, i) in blueItems">
+                <div class="blue-img-sec c-point" v-for="(singleElem, i) in blueItems">
                     <div class="img-container">
                         <img :src="singleElem.image" :alt="singleElem.caption">
                     </div>
