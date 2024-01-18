@@ -94,6 +94,7 @@ export default {
                 &:hover{
                     color: $blue_brand;
                     cursor: pointer;
+                    border-bottom:3px solid $blue_brand;
                 }
             }
         }
