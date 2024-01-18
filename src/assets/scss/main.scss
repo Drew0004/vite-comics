@@ -1,7 +1,11 @@
 @use "partials/variables.scss" as *;
 @use "partials/mixins.scss" as *;
 
-h1 {
-    text-align: center;
-    color: lightcoral;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+html{
+    font-family: 'montserrat', sans-serif;
 }
