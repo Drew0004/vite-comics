@@ -114,11 +114,14 @@ export default {
 
 <template>
     <main>
+        <!-- jumbotron -->
         <div></div>
+        <!-- comics -->
         <section class="main-gray">
             <div>
-                <h2>Content goes here </h2>
+                <SingleComic v-for="(singleComic, i) in comics" :key="i" :comic="singleComic"/>
             </div>
+
         </section>
 
         <section class="blue-main">
@@ -155,12 +158,7 @@ export default {
         
             >div{
                 @include container;
-
-                h2{
-                    font-size: $font_size_large;
-                    font-weight: $font_bold;
-                    color: $white_color;
-                }
+                @include row
             }
         }
 
