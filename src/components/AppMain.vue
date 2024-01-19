@@ -115,11 +115,26 @@ export default {
 <template>
     <main>
         <!-- jumbotron -->
-        <div></div>
+        <div>
+            <div class="jumbotron-container">
+                <div class="button-absolute-container">
+                    <h3 class="series-title">
+                        Current Series
+                    </h3>
+                </div>
+            </div>
+
+        </div>
         <!-- comics -->
         <section class="main-gray">
             <div>
                 <SingleComic v-for="(singleComic, i) in comics" :key="i" :comic="singleComic"/>
+            </div>
+            
+            <div class="main-button-container">
+                <button class="main-button">
+                    Load More
+                </button>
             </div>
 
         </section>
@@ -132,6 +147,7 @@ export default {
                     </div>
                     <h4>{{ singleElem.caption }}</h4>
                 </div>
+
             </div>
         </section>
 
@@ -151,14 +167,47 @@ export default {
             background-position: top center;
             object-fit: cover;
             background-repeat: no-repeat;
+            
+            .jumbotron-container{
+                @include container;
+                position: relative;
+                height: $percent_100;
+            }
+
+            .button-absolute-container{
+                position: absolute;
+                bottom: -20px;
+                left: -20px;
+
+                .series-title{
+                    background-color: $blue_brand;
+                    padding: $spacing_10 $spacing_20;
+                    text-transform: uppercase;
+                    color: $white_color;
+                    font-weight: $font_bold;
+                }
+            }
         }
         .main-gray{
             background-color: $main_background_color;
             padding: $spacing_50;
-        
-            >div{
+            
+            >div:first-child{
                 @include container;
-                @include row
+                @include row;
+            }
+            .main-button-container{
+                text-align: center;
+
+                .main-button{
+                    background-color: $blue_brand;
+                    border: none;
+                    font-size: $font_size_mid;
+                    padding: $spacing_10 $spacing_50;
+                    text-transform: uppercase;
+                    color: $white_color;
+                    font-weight: $font_bold;
+                }
             }
         }
 
@@ -197,6 +246,7 @@ export default {
         }
     }
 </style>
+
 
 
 
