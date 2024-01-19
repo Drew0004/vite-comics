@@ -2,6 +2,89 @@
 export default {
     data() {
         return {
+            dcComics: [
+                {
+                    title: 'Characters'
+                },
+                {
+                    title: 'Comics'
+                },
+                {
+                    title: 'Movies'
+                },
+                {
+                    title: 'TV'
+                },
+                {
+                    title: 'Games'
+                },
+                {
+                    title: 'Videos'
+                },
+                {
+                    title: 'News'
+                },
+            ],
+            shop: [
+               {
+                    title: 'Shop DC'
+                }, 
+                {
+                    title: 'Shop DC Collectibles'
+                },
+            ],
+            dc: [
+                {
+                    title:'Terms of use'
+                },
+                {
+                    title:'Privacy policy (New)'
+                },
+                {
+                    title:'Ad Choices'
+                },
+                {
+                    title:'Advertising'
+                },
+                {
+                    title:'Jobs'
+                },
+                {
+                    title:'Subscriptions'
+                },
+                {
+                    title:'Talent Workshops'
+                },
+                {
+                    title:'CPSC Certificates'
+                },
+                {
+                    title:'Ratings'
+                },
+                {
+                    title:'Shop Help'
+                },
+                {
+                    title:'Contact Us'
+                },
+            ],
+            sites: [
+                {
+                    title:'DC'
+                },
+                {
+                    title:'MAD Magazin'
+                },
+                {
+                    title:'DC Kids'
+                },
+                {
+                    title:'DC Universe'
+                },
+                {
+                    title:'DC Power Visa'
+                },
+            ]
 
         };
     },
@@ -23,47 +106,26 @@ export default {
                     <div class="foot-list">
                         <h3>DC COMICS</h3>
                         <ul>
-                            <li>Characters</li>
-                            <li>Comics</li>
-                            <li>Movies</li>
-                            <li>TV</li>
-                            <li>Games</li>
-                            <li>Videos</li>
-                            <li>News</li>
+                            <li v-for="(singleElem, i) in dcComics"> {{ singleElem.title }}</li>
                         </ul>
                         
                         <h3>SHOP</h3>
                         <ul>
-                            <li>Shop DC</li>
-                            <li>Shop DC Collectibles</li>
+                            <li v-for="(singleElem, j) in shop">{{ singleElem.title }}</li>
                         </ul>
                     </div>
                 
                     <div class="foot-list">
                         <h3>DC</h3>
                         <ul>
-                            <li>Terms of Use</li>
-                            <li>Privacy policy (New)</li>
-                            <li>Ad Choices</li>
-                            <li>Advertising</li>
-                            <li>Jobs</li>
-                            <li>Subscriptions</li>
-                            <li>Talent Workshops</li>
-                            <li>CPSC Certificates</li>
-                            <li>Ratings</li>
-                            <li>Shop Help</li>
-                            <li>Contact Us</li>
+                            <li v-for="(singleElem, z) in dc">{{ singleElem.title }}</li>
                         </ul>
                     </div>
                     
                     <div class="foot-list">
                         <h3>Sites</h3>
                         <ul>
-                            <li>DC</li>
-                            <li>MAD Magazine</li>
-                            <li>DC Kids</li>
-                            <li>DC Universe</li>
-                            <li>DC Power Visa</li>
+                            <li v-for="(singleElem, x) in sites">{{ singleElem.title }}</li>
                         </ul>
                     </div>
 
