@@ -1,4 +1,5 @@
 <script>
+import SingleComic from './SingleComic.vue';
 export default {
     data() {
         return {
@@ -104,12 +105,16 @@ export default {
     },
     methods: {
 
+    },
+    components:{
+        SingleComic
     }
 }
 </script>
 
 <template>
     <main>
+        <div></div>
         <section class="main-gray">
             <div>
                 <h2>Content goes here </h2>
@@ -136,6 +141,14 @@ export default {
     @use "../assets/scss/partials/mixins.scss" as *;
     
     main{
+        >div{
+            width: 100% auto;
+            height: 400px;
+            background-image: url(../../public/vue-dc-comics-1/img/jumbotron.jpg);
+            background-position: top center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+        }
         .main-gray{
             background-color: $main_background_color;
             padding: $spacing_50;
